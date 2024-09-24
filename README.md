@@ -22,10 +22,10 @@ This is a simple 2D platformer game inspired by Doodle Jump, created with [Godot
 ## Screenshots
 
 ### Gameplay Scene
-![Gameplay Screenshot]()
+![Gameplay Screenshot](./Снимок экрана 2024-09-24 165721.png)
 
 ### Score Scene
-![Score Scene Screenshot]()
+![Score Scene Screenshot](./Снимок экрана 2024-09-24 165653.png)
 
 ## Video Walkthrough
 
