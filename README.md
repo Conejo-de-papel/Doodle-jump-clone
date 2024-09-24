@@ -25,12 +25,12 @@ This is a simple 2D platformer game inspired by Doodle Jump, created with [Godot
 ![Gameplay Screenshot](https://github.com/Conejo-de-papel/Doodle-jump-clone/blob/main/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-09-24%20165653.png)
 
 ### Score Scene
-![Score Scene Screenshot](https://github.com/Conejo-de-papel/Doodle-jump-clone/blob/main/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-09-24%20165721.png))
+![Score Scene Screenshot](https://github.com/Conejo-de-papel/Doodle-jump-clone/blob/main/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-09-24%20165721.png)
 
 ## Video Walkthrough
 
 Here's a short video showcasing the gameplay of the project:
-
+![Gameplay](https://github.com/Conejo-de-papel/Doodle-jump-clone/blob/main/gameplay.gif)
 ## Requirements
 
 - [Godot Engine 3.3.2](https://godotengine.org/download)
