@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://xqj7xt11rch4"]
+
+[ext_resource type="PackedScene" uid="uid://daa05kulh6tbq" path="res://actors/player_green.tscn" id="1_hyqtl"]
+[ext_resource type="PackedScene" uid="uid://b15dlvkmpupsf" path="res://platform/platform.tscn" id="2_vgwin"]
+
+[node name="Doodle_jump" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_hyqtl")]
+position = Vector2(90, 160)
+
+[node name="platform" parent="player" instance=ExtResource("2_vgwin")]
+position = Vector2(0, 107)

@@ -1,0 +1,81 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://scenes/platform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/player_main.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/game.gd" type="Script" id=3]
+[ext_resource path="res://platform/spring_platform.tscn" type="PackedScene" id=4]
+[ext_resource path="res://platform/cloud_platfotm.tscn" type="PackedScene" id=5]
+[ext_resource path="res://fonts/Kenney Pixel.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://scenes/enemy.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/BG.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/Extra/btn_right-pressed.png" type="Texture" id=9]
+[ext_resource path="res://assets/Extra/btn_left-normal.png" type="Texture" id=10]
+[ext_resource path="res://assets/Extra/btn_left-pressed.png" type="Texture" id=11]
+[ext_resource path="res://assets/Extra/btn_right-normal.png" type="Texture" id=12]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 89.706, 10 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+outline_size = 2
+outline_color = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+font_data = ExtResource( 6 )
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 3 )
+platform_scene = [ ExtResource( 1 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 7 ) ]
+
+[node name="BG" parent="." instance=ExtResource( 8 )]
+
+[node name="platform_container" type="Node2D" parent="."]
+position = Vector2( 7.5, 163 )
+
+[node name="platform" parent="platform_container" instance=ExtResource( 1 )]
+position = Vector2( 86.3518, 95.6737 )
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 91.9376, 232.66 )
+
+[node name="camera" type="Camera2D" parent="."]
+position = Vector2( 90, 160 )
+current = true
+
+[node name="platform_cleaner" type="Area2D" parent="camera"]
+position = Vector2( 0, 180 )
+collision_layer = 0
+collision_mask = 7
+
+[node name="collision" type="CollisionShape2D" parent="camera/platform_cleaner"]
+shape = SubResource( 1 )
+
+[node name="score" type="Label" parent="camera"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -15.4038
+margin_top = -142.128
+margin_right = 24.5962
+margin_bottom = -111.128
+custom_fonts/font = SubResource( 2 )
+text = "0
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttons" type="CanvasLayer" parent="."]
+
+[node name="btn_left" type="TouchScreenButton" parent="Buttons"]
+position = Vector2( 10, 275 )
+normal = ExtResource( 10 )
+pressed = ExtResource( 11 )
+action = "ui_left"
+
+[node name="btn_right" type="TouchScreenButton" parent="Buttons"]
+position = Vector2( 140, 275 )
+normal = ExtResource( 12 )
+pressed = ExtResource( 9 )
+action = "ui_right"
+
+[connection signal="body_entered" from="camera/platform_cleaner" to="." method="_on_platform_cleaner_body_entered"]
