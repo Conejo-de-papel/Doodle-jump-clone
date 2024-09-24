@@ -30,6 +30,7 @@ This is a simple 2D platformer game inspired by Doodle Jump, created with [Godot
 ## Video Walkthrough
 
 Here's a short video showcasing the gameplay of the project:
+
 ![Gameplay](https://github.com/Conejo-de-papel/Doodle-jump-clone/blob/main/gameplay.gif)
 ## Requirements
 
