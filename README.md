@@ -19,6 +19,18 @@ This is a simple 2D platformer game inspired by Doodle Jump, created with [Godot
   - **Score Scene**: Displays the score achieved after the player dies.
 - No health system, the game ends upon enemy collision or falling off the screen.
 
+## Screenshots
+
+### Gameplay Scene
+![Gameplay Screenshot]()
+
+### Score Scene
+![Score Scene Screenshot]()
+
+## Video Walkthrough
+
+Here's a short video showcasing the gameplay of the project:
+
 ## Requirements
 
 - [Godot Engine 3.3.2](https://godotengine.org/download)
